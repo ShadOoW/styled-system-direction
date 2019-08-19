@@ -6,7 +6,7 @@ const camelToDash = (str) => (
   str.replace(/\W+/g, '-').replace(/([a-z\d])([A-Z])/g, '$1-$2')
 );
 
-const filterProps = (props, pre) => {
+export const filterProps = (props, pre) => {
   const result = {};
 
   Object.entries(props).forEach((prop) => {
