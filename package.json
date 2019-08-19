@@ -1,0 +1,68 @@
+{
+  "name": "styled-system-direction",
+  "version": "1.0.5",
+  "description": "Provides a function to add direction (RTL/LTR) aware css props to your component",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint . --color",
+    "clean": "rm -rf dist",
+    "prepare": "npm run clean && mkdir dist && npm run build:cjs && npm run build:esm",
+    "build:cjs": "NODE_ENV=cjs babel src --out-file dist/index.js --root-mode upward",
+    "build:esm": "NODE_ENV=esm babel src --out-file dist/index.esm.js --root-mode upward"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShadOoW/styled-system-direction.git"
+  },
+  "keywords": [
+    "dir",
+    "direction",
+    "rtl",
+    "ltr",
+    "styled-system",
+    "styled-components",
+    "design-system",
+    "react component",
+    "react",
+    "arabic",
+    "ui",
+    "css"
+  ],
+  "author": "Younes El Alami",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ShadOoW/styled-system-direction/issues"
+  },
+  "homepage": "https://github.com/ShadOoW/styled-system-direction#readme",
+  "dependencies": {
+    "rtl-css-js": "^1.13.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.8.0",
+    "babel-plugin-transform-rename-import": "^2.3.0",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "jest": "^24.8.0",
+    "jest-styled-components": "^6.3.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-test-renderer": "^16.8.6"
+  },
+  "jest": {
+    "testMatch": [
+      "**/test/**/*.js"
+    ],
+    "setupFilesAfterEnv": [
+      "jest-styled-components"
+    ]
+  }
+}
